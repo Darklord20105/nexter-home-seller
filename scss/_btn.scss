@@ -1,0 +1,24 @@
+@mixin btn-shared {
+	display: inline-block;
+	padding: 2rem 3.5rem;
+	border: none;
+	border-radius: 3px;
+	font-size: 2rem;
+	transition: all 0.8s;
+	font-weight: 300;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.btn {
+	&-primary {
+		@include btn-shared;
+		background: $color-primary;
+		color: $color-grey-light-1;
+
+		&:hover {
+			background: $color-secondary;
+			color: $color-primary;
+		}
+	}
+}

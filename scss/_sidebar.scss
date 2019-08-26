@@ -1,0 +1,39 @@
+.side-bar {
+	background: $color-primary;
+	grid-row: 1/-1;
+
+	position: relative;
+	@media only screen and (max-width: $bp-large) {
+		grid-row: 1/2;
+		grid-column: 1/-1;
+	}
+}
+
+.nav-btn {
+	border: none;
+	border-radius: 0;
+
+	background-color: #fff;
+	height: 2px;
+	width: 4.5rem;
+	margin-top: 4rem;
+
+	position: absolute;
+	left: 2rem;
+
+	&::before,
+	&::after {
+		background-color: #fff;
+		height: 2px;
+		width: 4.5rem;
+		content: "";
+		display: block;
+	}
+
+	&::before {
+		transform: translateY(-1.5rem);
+	}
+	&::after {
+		transform: translateY(1.3rem);
+	}
+}
